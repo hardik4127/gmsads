@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycle_ad"
+            android:layout_alignParentBottom="true"
+            android:gravity="center|bottom" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/layout1"
+        android:id="@+id/relative_native1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible">
+
+        <com.adsapp.adstool.appads.GN_Native.Ads_TemplateView
+            android:id="@+id/my_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:gnt_template_type="@layout/a_ads_s_templateview" />
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/native_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.startapp.sdk.ads.banner.Banner
+        android:layout_below="@+id/relative_native1"
+        android:id="@+id/startAppBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MoreApps"
+        android:text="MoreApps"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#000000"
+        />
+
+</RelativeLayout>
